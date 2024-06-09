@@ -1,0 +1,15 @@
+[package]
+name = "example-actix"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rspc = { path = "../../"}
+rspc-actix = { path = "../../crates/actix", features = ["ws"]}
+actix = "0.13.4"
+actix-web = "4.7.0"
+actix-web-actors = "4.3.0"
+tokio = { version = "1", features = ["full"] }
+env_logger = "0.11.3"
+form_urlencoded = "1.2.1"
+async-stream = "0.3.5"
