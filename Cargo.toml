@@ -39,7 +39,7 @@ tokio = { version = "1.36.0", features = ["sync", "rt", "macros"] }
 tracing = { version = "0.1.40", optional = true }
 
 [workspace]
-members = ["./crates/*", "./examples", "./examples/axum"]
+members = ["./crates/*", "./examples", "./examples/axum", "./examples/axum-prisma"]
 
 [patch.crates-io]
 # Interop support

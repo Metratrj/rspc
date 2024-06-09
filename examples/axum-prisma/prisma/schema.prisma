@@ -1,0 +1,21 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+    // Corresponds to the cargo alias created earlier
+    provider      = "cargo run --bin prisma --"
+    // The location to generate the client. Is relative to the position of the schema
+    output        = "../src/prisma.rs"
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:example@localhost:5432/axum?schema=public"
+}
+
+
+model User {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+}
